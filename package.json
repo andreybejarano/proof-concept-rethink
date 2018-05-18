@@ -6,7 +6,16 @@
   "scripts": {
     "lint": "eslint --fix .",
     "test": "npm run lint && ava test/**-test.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "start:watch": "nodemon index.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules"
+    ],
+    "nodeArgs": [
+      "--inspect=5821"
+    ]
   },
   "repository": {
     "type": "git",
@@ -25,7 +34,8 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "nodemon": "^1.17.4"
   },
   "dependencies": {
     "express": "^4.16.3",
